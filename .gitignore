@@ -5,3 +5,9 @@
 /service-oa/target/
 /oa.iml
 /.idea/
+/service-oa/service-oa.iml
+common/common-util/common-util.iml
+common/common.iml
+common/service-util/service-util.iml
+model/model.iml
+service-oa/service-oa.iml
