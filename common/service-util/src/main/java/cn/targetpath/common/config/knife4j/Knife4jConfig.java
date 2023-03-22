@@ -1,4 +1,4 @@
-package cn.targetpath.common.config.hnife4j;
+package cn.targetpath.common.config.knife4j;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

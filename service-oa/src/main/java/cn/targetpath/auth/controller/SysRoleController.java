@@ -3,6 +3,7 @@ package cn.targetpath.auth.controller;
 import cn.targetpath.auth.model.system.SysRole;
 import cn.targetpath.auth.service.SysRoleService;
 import cn.targetpath.auth.vo.system.SysRoleQueryVo;
+import cn.targetpath.common.execption.SelfExecption;
 import cn.targetpath.common.result.Result;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -34,6 +35,11 @@ public class SysRoleController {
     @GetMapping("findAll")
     public Result<List<SysRole>> findAll() {
         List<SysRole> roleList = sysRoleService.list();
+//        try {
+//            int a= 10/0;
+//        }catch (Exception e){
+//            throw new SelfExecption(2001,"controller自定义异常");
+//        }
         return Result.ok(roleList);
     }
 
@@ -65,6 +71,7 @@ public class SysRoleController {
 
         //3 调用方法实现
         IPage<SysRole> pageModel = sysRoleService.page(pageParam, wrapper);
+
         return Result.ok(pageModel);
     }
 
